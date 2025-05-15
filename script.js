@@ -1,7 +1,14 @@
-const parseCode = (str) => {
-  // your code here
-};
+function parseCode(encodedString) {
+ 
+  const parts = encodedString.split(/0+/);
+  
 
-// Do not change the code below
-const str = prompt("Enter str: ");
-alert(JSON.stringify(parseCode(str)));
+  const [firstName, lastName, id] = parts;
+  
+ 
+  return {
+    firstName,
+    lastName,
+    id
+  };
+}
